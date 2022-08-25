@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Hcrany">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="绪论[第一章   计算机系统概述.pptx](resouce\第一章   计算机系统概述.pptx)  一.电子计算机概念:电子计算机是一个不需要人工直接干预能自动.高速.准确地对信息经行处理和存储的电子设备 分类: 电子模拟计算机 和 电子数字计算机 二.简史根据內部的电子元器件可分为:  电子管计算机 晶体管计算机 小.中规模计算机 大.超大规模计算机  存储程序控制由冯.诺依曼提出 内容:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机组成原理">
+<meta property="og:url" content="http://example.com/2022/02/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:site_name" content="Hcrany&#39;blog">
+<meta property="og:description" content="绪论[第一章   计算机系统概述.pptx](resouce\第一章   计算机系统概述.pptx)  一.电子计算机概念:电子计算机是一个不需要人工直接干预能自动.高速.准确地对信息经行处理和存储的电子设备 分类: 电子模拟计算机 和 电子数字计算机 二.简史根据內部的电子元器件可分为:  电子管计算机 晶体管计算机 小.中规模计算机 大.超大规模计算机  存储程序控制由冯.诺依曼提出 内容:">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="d:/Typora/note/image/不同码值的对比.jpg">
+<meta property="article:published_time" content="2022-02-25T09:51:06.385Z">
+<meta property="article:modified_time" content="2022-08-25T05:10:08.972Z">
+<meta property="article:author" content="Hcrany">
+<meta property="article:tag" content="计算机组成原理">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="d:/Typora/note/image/不同码值的对比.jpg">
+  
+  
+  
+  <title>计算机组成原理 - Hcrany&#39;blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":"true_","element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Hcrany</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="计算机组成原理"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-02-25 17:51" pubdate>
+          2022年2月25日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          22 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">计算机组成原理</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><p>[第一章   计算机系统概述.pptx](resouce\第一章   计算机系统概述.pptx) </p>
+<h3 id="一-电子计算机"><a href="#一-电子计算机" class="headerlink" title="一.电子计算机"></a>一.电子计算机</h3><p>概念:电子计算机是一个不需要人工直接干预能自动.高速.准确地对信息经行处理和存储的电子设备</p>
+<p>分类: 电子模拟计算机 和 电子数字计算机</p>
+<h3 id="二-简史"><a href="#二-简史" class="headerlink" title="二.简史"></a>二.简史</h3><p>根据內部的电子元器件可分为:</p>
+<ol>
+<li>电子管计算机</li>
+<li>晶体管计算机</li>
+<li>小.中规模计算机</li>
+<li>大.超大规模计算机</li>
+</ol>
+<h2 id="存储程序控制"><a href="#存储程序控制" class="headerlink" title="存储程序控制"></a>存储程序控制</h2><p>由冯.诺依曼提出</p>
+<p>内容: </p>
+<ol>
+<li>计算机应有运算器.控制器.存储器.输入设备.输出设备五大基本部分组成</li>
+<li>计算机內部用二进制表示指令和数据</li>
+<li>将编写好的程序和原始数据事先保存在存储器中,然后在启动计算机工作</li>
+</ol>
+<h2 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h2><p>运算器.控制器.存储器.输入设备.输出设备和总线</p>
+<p>CPU:运算器+控制器</p>
+<p>电脑组成: 主机(<strong>CPU</strong>+主存储器) + 外设 (输入设备.输出设备 <strong>辅助存储器</strong>)</p>
+<h3 id="一-输入设备"><a href="#一-输入设备" class="headerlink" title="一.输入设备"></a>一.输入设备</h3><h3 id="二-输出设备"><a href="#二-输出设备" class="headerlink" title="二.输出设备"></a>二.输出设备</h3><h3 id="三-存储器"><a href="#三-存储器" class="headerlink" title="三.存储器"></a>三.存储器</h3><p>存储数据的仪器</p>
+<p>一般构成一个存储系统</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>高速缓冲存储器 (Cache)</td>
+<td>用于CPU与主存储器之间的缓冲 (通常当CPU速度非常高时)</td>
+</tr>
+<tr>
+<td>主存储器</td>
+<td>用于CPU与主存储器之间的缓冲 (断电即逝)</td>
+</tr>
+<tr>
+<td>辅助存储器</td>
+<td>存储数据 CPU不能直接访问</td>
+</tr>
+</tbody></table>
+<h3 id="四-运算器"><a href="#四-运算器" class="headerlink" title="四.运算器"></a>四.运算器</h3><p>计算机进行算术运算和逻辑运算的仪器</p>
+<h3 id="五-控制器"><a href="#五-控制器" class="headerlink" title="五.控制器"></a>五.控制器</h3><p>控制其它设备,完成指令的执行</p>
+<p>计算机的控制中心,根据人为指定的操作,协调计算机其它部件有条不紊的经行运作</p>
+<h3 id="六-总线"><a href="#六-总线" class="headerlink" title="六.总线"></a>六.总线</h3><p>是一组多个部件服务的公共信息传送线路,能分时地发送和接收其它部件信息</p>
+<p>特点:分时共享</p>
+<p>结构:</p>
+<p>最简单的结构为单总线结构</p>
+<p>优点:提高CPU的工作效率,外设连接更灵活,易于扩展</p>
+<p>缺点:由于部件挂在同一组总线上,根据总线的分时共享,所以在同一时刻只能一对部件传送信息</p>
+<p>系统总线: 数据总线 . 地址总线 . 控制总线</p>
+<p>数据总线 :CPU与其它部件经行数据传输的线路</p>
+<p>地址总线 :地址信息</p>
+<p>控制总线 :CPU的控制命令和 主存储器的反馈信号</p>
+<h2 id="哈佛结构"><a href="#哈佛结构" class="headerlink" title="哈佛结构"></a>哈佛结构</h2><p>不同与冯.诺依曼结构,指令与数据完全分开在两个存储器,指令存储器(PM)和数据存储器(DM),总线至少两组</p>
+<h2 id="计算机系统"><a href="#计算机系统" class="headerlink" title="计算机系统"></a>计算机系统</h2><p>计算机系统由硬件系统和软件系统组成</p>
+<p>硬件系统和软件系统的关系:</p>
+<ol>
+<li>相互依存,协同发展</li>
+<li>逻辑等效性</li>
+</ol>
+<p>固件</p>
+<h2 id="系列机与软件兼容"><a href="#系列机与软件兼容" class="headerlink" title="系列机与软件兼容"></a>系列机与软件兼容</h2><h3 id="系列机"><a href="#系列机" class="headerlink" title="系列机:"></a>系列机:</h3><p>由一个厂家生产,有相同的系统结构,但有不同的组成和实现的一系列不同型号的机器</p>
+<p>相同的系统结构: 指令系统.数据格式.字符编码.中断系统.控制方式和输入输出操作方式等多方面保持同一</p>
+<h3 id="软件兼容"><a href="#软件兼容" class="headerlink" title="软件兼容:"></a>软件兼容:</h3><p>某种机器编制的程序,在不修改的情况下,在另一种机器上也能运行</p>
+<ol>
+<li>向上(下)兼容     机器的档次</li>
+<li>向前(后)兼容     机器市场发布的时间</li>
+</ol>
+<h2 id="计算机系统的分层次结构"><a href="#计算机系统的分层次结构" class="headerlink" title="计算机系统的分层次结构"></a>计算机系统的分层次结构</h2><p>划分标准: 功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java">虚拟机器:<br>应用语言层   机器语言:由于某种用途而专门设计,各种面向问题的应用语言<br>高级语言层   机器语言:各类高级语言 由编译程序经行编译<br>汇编指令层   机器语言:汇编指令 由汇编程序经行编译<br>操作系统层   一方面管理传统机器的软硬件资源,另一方面是传统机器的延申<br>实际机器:<br>指令集架构层  机器语言:指令集 由微程序经行解释<br>微代码层      机器语言:微指令集 由硬件直接执行<br>逻辑门层      计算机系统的内核,由一系列的物理逻辑电路构成<br></code></pre></td></tr></table></figure>
+
+<p>意义: 正确理解计算机系统的工作过程,明确软硬件在计算机系统中的地位和作用</p>
+<h2 id="计算机系统的工作过程和性能指标"><a href="#计算机系统的工作过程和性能指标" class="headerlink" title="计算机系统的工作过程和性能指标"></a>计算机系统的工作过程和性能指标</h2><h3 id="工作过程"><a href="#工作过程" class="headerlink" title="工作过程"></a>工作过程</h3><p>取指执行</p>
+<h3 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h3><ol>
+<li><p>机器字长</p>
+</li>
+<li><p>数据通路宽路</p>
+</li>
+<li><p>主存容量</p>
+</li>
+<li><p>运算速度</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">1.</span> 吞吐量和响应时间<br><span class="hljs-number">2.</span> 主频和时钟周期<br><span class="hljs-number">3.</span> CPI<br><span class="hljs-number">4.</span> MIPS<br><span class="hljs-number">5.</span> MFLOPS<br></code></pre></td></tr></table></figure>
+
+<h1 id="数据的机器层次表示"><a href="#数据的机器层次表示" class="headerlink" title="数据的机器层次表示"></a>数据的机器层次表示</h1><p> [第二章   数据的机器层次表示.pptx](resouce\第二章   数据的机器层次表示.pptx) </p>
+<h2 id="数值数据的表示"><a href="#数值数据的表示" class="headerlink" title="数值数据的表示"></a>数值数据的表示</h2><p>机器数:机器内部表示数的编码</p>
+<p>不同进制:</p>
+<ol>
+<li>二进制 binary   (011011)2        010011B</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> a=<span class="hljs-number">0b01010011</span>;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>八进制 oct    (64155721)8    01002101222Q   咦?为什么是Q</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> a=<span class="hljs-number">072150</span>;   <br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>十进制  </p>
+</li>
+<li><p>十六进制  hex   (01102110)16    0100A1B1H</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> a=<span class="hljs-number">0x120A11B2</span>;<br></code></pre></td></tr></table></figure>
+
+<h2 id="无符号数与有符号数"><a href="#无符号数与有符号数" class="headerlink" title="无符号数与有符号数"></a>无符号数与有符号数</h2><p><strong>以下全部假设机器字长为8</strong></p>
+<p> 无符号数表示范围: 0 ~ 255</p>
+<p>有符号数( 正&#x2F;负 ): 用最高位表示符号位 其它位数表示数的绝对值</p>
+<p>有符号数表示的范围: -128 ~ 127  ( -128 ^ - ^ )</p>
+<h2 id="不同的编码方式"><a href="#不同的编码方式" class="headerlink" title="不同的编码方式"></a>不同的编码方式</h2><ol>
+<li>原码</li>
+<li>反码</li>
+<li>补码</li>
+<li>移码</li>
+</ol>
+<p>一. 原码</p>
+<p>符号位(最高位): 正 0 负 1</p>
+<p>数值位: 真值的绝对值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">12</span> <span class="hljs-number">0000</span> <span class="hljs-number">1100</span><br>-<span class="hljs-number">3</span> <span class="hljs-number">1000</span> <span class="hljs-number">0011</span><br></code></pre></td></tr></table></figure>
+
+<p>表示范围: -127 ~ 127</p>
+<p>0的表示: (+0) 0000 0000  (-0) 1000 0000</p>
+<p>优点: 直观易懂,转换容易</p>
+<p>缺点: 在进行数值运算时符号位不能直接参与运算</p>
+<p>二. 反码</p>
+<p>在原码上 符号位不变,其余按位取反 (前提是负数,正数三码同一)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">12</span> <span class="hljs-number">0000</span> <span class="hljs-number">1100</span><br>-<span class="hljs-number">3</span> <span class="hljs-number">1111</span> <span class="hljs-number">1100</span><br></code></pre></td></tr></table></figure>
+
+<p>表示范围: -127 ~ 127</p>
+<p>0的表示: (+0) 0111 1111  (-0) 1111 1111</p>
+<p>反码可以说是原码到补码的中间码,有无都可</p>
+<p>三. 补码</p>
+<ol>
+<li>补码 &#x3D; 反码 + 1</li>
+<li>原码的最右边的1开始到最右不变,其余位取反 ( 当然符号位不能变 )   这种方法无反码的产生</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">12</span> <span class="hljs-number">0000</span> <span class="hljs-number">1100</span><br>-<span class="hljs-number">3</span> <span class="hljs-number">1111</span> <span class="hljs-number">1101</span><br></code></pre></td></tr></table></figure>
+
+<p>表示范围: -128 ~ 127    (嗯~  ^ - ^  <strong>-128</strong> )</p>
+<p>0的表示: ( 0 ) 0000 0000  ( 1000 0000 表示 -128 )</p>
+<p>计算机中数值运算的表示</p>
+<p>四. 移码</p>
+<p>[X]移 &#x3D; X + 偏置值</p>
+<p>有一种是: 移码 &#x3D; 补码 + 1000 0000</p>
+<p>即: 符号位 正 1 负 0 其余位同补码</p>
+<p>0的表示: ( 0 ) 1000 0000</p>
+<p>优点: 码值越大,真值越大,用作表示浮点数的阶码,比较浮点数</p>
+<p>原码.反码.补码的比较:</p>
+<ol>
+<li>正数三码同一,不同的编码方式针对于负数</li>
+<li>0的表示 原码与反码: 2种 补码与移码: 1种</li>
+</ol>
+<p><img src="D:\Typora\note\image\不同码值的对比.jpg" srcset="/img/loading.gif" lazyload alt="不同码值的对比"></p>
+<h2 id="机器数的定点表示与浮点表示"><a href="#机器数的定点表示与浮点表示" class="headerlink" title="机器数的定点表示与浮点表示"></a>机器数的定点表示与浮点表示</h2><p>分类依据: 小数点的位置是否固定</p>
+<p>最高位还是符号位</p>
+<p>定点数:</p>
+<ol>
+<li>定点整数也称为纯整数 小数点在最后</li>
+<li>定点小数也称为纯小数 小数点在符号位的后面数值位的前面,但在计算机中不表示小数点,心中要有小数点</li>
+</ol>
+<p>浮点数:</p>
+<p>N &#x3D; M * R^E</p>
+<p>M: 表示尾数( 纯小数 ) 其位数决定有效数字的精度</p>
+<p>R: 基数 一般 R&#x3D;2</p>
+<p>E: 阶码 其位数决定浮点数表示的范围</p>
+<p>规格化浮点数: 尾数的最高位数必须是一个有效位</p>
+<p>如采用原码表示为 1 ,采用补码表示 与符号位相反</p>
+<h2 id="IEEE754标准浮点数"><a href="#IEEE754标准浮点数" class="headerlink" title="IEEE754标准浮点数:"></a>IEEE754标准浮点数:</h2><p>符号位 阶码 尾数 </p>
+<p>float单精度浮点数( 32位 ) 符号位( 1位 ) 阶码( 8位) 尾数 ( 23位 )</p>
+<p>double双精度浮点数( 64位 ) 符号位( 1位 ) 阶码( 11位) 尾数 ( 52位 )</p>
+<p>偏移值: float 7FH 127 111 1111 ; double 3FFH 1023 11 1111 1111</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="category-chain-item">计算机组成原理</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">#计算机组成原理</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>计算机组成原理</div>
+      <div>http://example.com/2022/02/25/计算机组成原理/计算机组成原理/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Hcrany</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年2月25日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/03/01/Java/Course/" title="Java大学课程">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Java大学课程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/01/21/Car/%E7%A7%91%E7%9B%AE%E4%B8%80/" title="科目一">
+                        <span class="hidden-mobile">科目一</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>每天进步一点点</span> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
