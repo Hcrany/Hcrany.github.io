@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'LXGWWenKai';
+  font-display: swap;
+  src: url('/font/LXGWWenKai-Regular.ttf') format("truetype");  
+}
+@font-face {
+  font-family: 'JetBrainsMono';
+  font-display: swap;
+  src: url('/font/LXGWWenKaiMono-Regular.ttf') format("truetype");  
+}
